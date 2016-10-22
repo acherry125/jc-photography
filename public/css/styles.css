@@ -8,14 +8,15 @@ main {
 }
 
 .slick-carousel {
-	width: 75%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .slick-item {
-	padding: 0 100px;
+	/*padding: 0 100px;*/
 	max-height: 350px;
+	margin: 0 5px;
 }
 
 .slick-item:focus, .slick-item:active {
@@ -27,6 +28,16 @@ main {
 	margin: 0 auto;
 }
 
-.slick-next:before, .slick-prev:before {
+.slick-arrow {
+	display: none !important;
+}
+
+.slick-arrow:before {
 	color: #003763;
+}
+
+@media only screen and (min-width: 640px) {
+	.slick-arrow {
+		display: inline-block !important;
+	}
 }
