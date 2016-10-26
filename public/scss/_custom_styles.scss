@@ -1,0 +1,66 @@
+
+$cherryRed: #6A1616;
+
+header {
+	padding: 10px 10px;
+	text-align: center;
+	h1 {
+		font-family: 'Parisienne', cursive;
+	}
+}
+
+main {
+	padding: 0 10px;
+}
+
+.slick-carousel {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slick-item {
+	/*padding: 0 100px;*/
+	max-height: 350px;
+	margin: 0 5px;
+	&:focus, &:active {
+		outline: none;
+	}
+	img {
+		max-height: inherit;
+		margin: 0 auto;
+	}
+}
+
+.slick-arrow {
+	display: none !important;
+	&:before {
+		color: #003763;
+	}
+}
+
+.top-bar {
+	background-color: $cherryRed;
+	.dropdown {
+		background-color: $cherryRed;
+	}
+}
+
+.logo {
+	position: fixed;
+}
+
+.carousel {
+	.th {
+		border: solid 4px $cherryRed;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	.slick-arrow {
+		display: inline-block !important;
+	}
+	.logo {
+		position: initial;
+	}
+}
