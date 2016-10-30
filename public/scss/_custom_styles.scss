@@ -76,6 +76,7 @@ main {
 	&.expanded {
 		height: 177px;
 		transition: $mobileNavTransition;
+		// TODO https://sarasoueidan.com/blog/navicon-transformicons/ 
 		.toggle-topbar a span:after {
 			transform: rotateZ(90deg);
   		 	left: 25px;
@@ -110,7 +111,7 @@ main {
 	}
 }
 #jc-main-gallery {
-	width: 100%;
+	clear: both;
 }
 .jc-gallery {
 	width: 100%;

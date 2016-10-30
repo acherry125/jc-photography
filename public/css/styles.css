@@ -116,7 +116,7 @@ main {
 }
 
 #jc-main-gallery {
-  width: 100%;
+  clear: both;
 }
 
 .jc-gallery {
