@@ -1,15 +1,6 @@
 
 var express = require('express'),
-	dust = require('dustjs-linkedin'),
-	kleiDust = require('klei-dust'),
 	app = express();
-
-app.configure(function () {
-    app.set('views', __dirname + '/views');
-    app.engine('dust', kleiDust.dust);
-    app.set('view engine', 'dust');
-    app.set('view options', {layout: false});
-});
 
 // configure a public directory to host static content
 app.use(express.static(__dirname + '/public'));
