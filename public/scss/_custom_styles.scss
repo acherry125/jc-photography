@@ -1,5 +1,14 @@
 
-$cherryRed: #6A1616;
+$cherryRed: #d44865;
+$mango: #f7a67b;
+$mobileNavTransition: 0.5s;
+
+body {
+	font-family: "Open Sans", sans-serif;
+	h1, h2, h3, h4, h5, h6, p {
+		font-family: "Open Sans", sans-serif;
+	}
+}
 
 header {
 	padding: 10px 10px;
@@ -12,6 +21,22 @@ header {
 main {
 	padding: 0 10px;
 }
+/* Styles for fluid gallery
+.carpool {
+	line-height: 0;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5; 
+    column-gap: 0px;
+}
+
+.carpool img {
+	width: 100%;
+	height: auto;
+}
+*/
 
 .slick-carousel {
 	width: 90%;
@@ -20,8 +45,7 @@ main {
 }
 
 .slick-item {
-	/*padding: 0 100px;*/
-	max-height: 350px;
+	max-height: 55vh;
 	margin: 0 5px;
 	&:focus, &:active {
 		outline: none;
@@ -41,26 +65,115 @@ main {
 
 .top-bar {
 	background-color: $cherryRed;
+	transition: $mobileNavTransition;
 	.dropdown {
 		background-color: $cherryRed;
+	}
+	&.expanded .logo {
+		width: 70px;
+		transition: $mobileNavTransition;
+	}
+	&.expanded {
+		height: 177px;
+		transition: $mobileNavTransition;
+		.toggle-topbar a span:after {
+			transform: rotateZ(90deg);
+  		 	left: 25px;
+  		 	top: 25px;
+  		 	transition: $mobileNavTransition;
+  		 	box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+  		 	-webkit-box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
+		}	
+	}
+}
+
+.top-bar-section {
+	li {
+		&:hover, &:focus, &:active {
+			background-color: $mango;
+		}
 	}
 }
 
 .logo {
 	position: fixed;
+	width: 100px;
+	transition: $mobileNavTransition;
 }
 
 .carousel {
 	.th {
-		border: solid 4px $cherryRed;
+		border: solid 2px $cherryRed;
+		margin-bottom: 3px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+#jc-main-gallery {
+	width: 100%;
+}
+.jc-gallery {
+	width: 100%;
+	line-height: 0;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    column-count: 2; 
+    column-gap: 0px;
+}
+
+.visible-img img {
+	max-height: 89%;
+}
+
+.full-button-wrapper {
+	width: 100%;
+	text-align: center;
+}
+.gallery-button {
+	background-color: $cherryRed;
+	color: #fff;
+	line-height: 0.25;
+	padding: 1rem 1.25rem;
+	font-weight: bold;
+	border: 2px solid #fff;
+	&:hover, &:focus, &:hover, &:focus {
+		background-color: $mango;
+		color: #fff;
+		border-color: $cherryRed;
 	}
 }
 
-@media only screen and (min-width: 640px) {
+.clearing-close {
+	line-height: 0;
+	padding-top: 20px;
+}
+
+.clearing-thumbs li, [data-clearing] li {
+	margin-right: 5px;
+}
+
+@media only screen and (min-width: 40.0625em) {
 	.slick-arrow {
 		display: inline-block !important;
 	}
 	.logo {
 		position: initial;
+	}
+	.visible-img img {
+		max-height: 100%;
+	}
+	.clearing-close {
+		line-height: 1;
+		padding-top: 0;
+	}
+	.jc-gallery {
+	    -webkit-column-count: 3;
+	    -webkit-column-gap: 0px;
+	    -moz-column-count: 3;
+	    -moz-column-gap: 0px;
+	    column-count: 3; 
+	    column-gap: 0px;
 	}
 }
