@@ -19,22 +19,6 @@ main {
   padding: 0 10px;
 }
 
-/* Styles for fluid gallery
-.carpool {
-	line-height: 0;
-    -webkit-column-count: 5;
-    -webkit-column-gap: 0px;
-    -moz-column-count: 5;
-    -moz-column-gap: 0px;
-    column-count: 5; 
-    column-gap: 0px;
-}
-
-.carpool img {
-	width: 100%;
-	height: auto;
-}
-*/
 .slick-carousel {
   width: 90%;
   margin-left: auto;
@@ -110,7 +94,7 @@ main {
 
 .carousel .th {
   border: solid 2px #d44865;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -164,7 +148,7 @@ main {
 }
 
 .clearing-thumbs li, [data-clearing] li {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 @media only screen and (min-width: 40.0625em) {
