@@ -92,6 +92,22 @@ main {
   transition: 0.5s;
 }
 
+.grid {
+  position: relative;
+}
+
+.grid-item {
+  width: 100%;
+  margin-bottom: 5px;
+  margin: 0 !important;
+}
+
+.clearing-assembled .clearing-container .grid-item {
+  top: 0 !important;
+  left: 0 !important;
+  position: relative !important;
+}
+
 .carousel .th {
   border: solid 2px #d44865;
   margin-bottom: 2px;
@@ -177,6 +193,10 @@ main {
        -moz-column-gap: 0px;
             column-gap: 0px;
   }
+  .grid-item, .grid-sizer {
+    width: -webkit-calc(50% - 3px);
+    width: calc(50% - 3px);
+  }
 }
 
 @media only screen and (min-width: 64.0625em) {
@@ -193,5 +213,28 @@ main {
             column-gap: 0px;
     margin: 0 auto;
     max-width: 95%;
+  }
+  .grid-item, .grid-sizer {
+    width: -webkit-calc(33.333% - 3px);
+    width: calc(33.333% - 3px);
+  }
+}
+
+@media only screen and (min-width: 90.063em) {
+  .jc-gallery {
+    -webkit-column-count: 4;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 4;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+            column-count: 4;
+    -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+            column-gap: 0px;
+  }
+  .grid-item, .grid-sizer {
+    width: -webkit-calc(25% - 3px);
+    width: calc(25% - 3px);
   }
 }
