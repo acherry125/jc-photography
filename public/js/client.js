@@ -9,13 +9,20 @@ function loadSlick() {
 
 function initHome() {
 	$('main').load('views/home.view.html', function() {
+		for(var i = 0; i < 32; i++) {
+			var path = 'demo_images/',
+				fileName = 'img (' + (i % 9) + ').JPG',
+				bigFileName = 'img (' + (i % 9) + ')-big.JPG'
+				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a href="' 
+				+ path + bigFileName + '"><img src="' + path + fileName + '"></a></li></div>';
+			$('.grid').append(gridItem);
+		}
 		$(document).foundation('clearing', 'reflow');
 		var $grid = $('.grid').masonry({
   			// options
   			itemSelector: '.grid-item',
   			columnWidth: '.grid-item',
   			percentPosition: true,
-  			gutter: 3,
   			transitionDuration: '0.3s'
 		});		
 		$grid.imagesLoaded().always( function() {

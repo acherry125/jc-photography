@@ -19,7 +19,7 @@ header {
 }
 
 main {
-	padding: 0 10px;
+	padding: 0 6px;
 }
 
 .slick-carousel {
@@ -98,6 +98,10 @@ main {
 		left: 0 !important;
 		position: relative !important;
 	}
+	.grid-item-padding {
+		padding: 0 2px;
+		margin-bottom: 4px;
+	}
 }
 
 .carousel {
@@ -120,6 +124,10 @@ main {
     -moz-column-gap: 0px;
     column-count: 1; 
     column-gap: 0px;
+}
+
+.visible-img {
+	height: 90%;
 }
 
 .visible-img img {
@@ -147,8 +155,11 @@ main {
 .clearing-close {
 	line-height: 0;
 	padding-top: 20px;
+	height: 30px;
 }
-
+.clearing-assembled:not(.clearing-blackout) .grid.clearing-thumbs {
+	left: 0 !important;
+}
 .clearing-thumbs li, [data-clearing] li {
 	margin-right: 2px;
 }
@@ -176,7 +187,7 @@ main {
 	    column-gap: 0px;
 	}
 	.grid-item, .grid-sizer {
-		width: calc(50% - 3px);
+		width: calc(50%);
 	}
 }
 
@@ -192,7 +203,7 @@ main {
 	    max-width: 95%;
 	}
 	.grid-item, .grid-sizer {
-		width: calc(33.333% - 3px);
+		width: calc(33.333%);
 	}
 }
 
@@ -206,6 +217,6 @@ main {
     column-gap: 0px;
 	}
 	.grid-item, .grid-sizer {
-		width: calc(25% - 3px);
+		width: calc(25%);
 	}
 }

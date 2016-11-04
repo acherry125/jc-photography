@@ -16,7 +16,7 @@ header h1 {
 }
 
 main {
-  padding: 0 10px;
+  padding: 0 6px;
 }
 
 .slick-carousel {
@@ -108,6 +108,11 @@ main {
   position: relative !important;
 }
 
+.grid-item .grid-item-padding {
+  padding: 0 2px;
+  margin-bottom: 4px;
+}
+
 .carousel .th {
   border: solid 2px #d44865;
   margin-bottom: 2px;
@@ -132,6 +137,10 @@ main {
   -webkit-column-gap: 0px;
      -moz-column-gap: 0px;
           column-gap: 0px;
+}
+
+.visible-img {
+  height: 90%;
 }
 
 .visible-img img {
@@ -161,6 +170,11 @@ main {
 .clearing-close {
   line-height: 0;
   padding-top: 20px;
+  height: 30px;
+}
+
+.clearing-assembled:not(.clearing-blackout) .grid.clearing-thumbs {
+  left: 0 !important;
 }
 
 .clearing-thumbs li, [data-clearing] li {
@@ -194,8 +208,8 @@ main {
             column-gap: 0px;
   }
   .grid-item, .grid-sizer {
-    width: -webkit-calc(50% - 3px);
-    width: calc(50% - 3px);
+    width: -webkit-calc(50%);
+    width: calc(50%);
   }
 }
 
@@ -215,8 +229,8 @@ main {
     max-width: 95%;
   }
   .grid-item, .grid-sizer {
-    width: -webkit-calc(33.333% - 3px);
-    width: calc(33.333% - 3px);
+    width: -webkit-calc(33.333%);
+    width: calc(33.333%);
   }
 }
 
@@ -234,7 +248,7 @@ main {
             column-gap: 0px;
   }
   .grid-item, .grid-sizer {
-    width: -webkit-calc(25% - 3px);
-    width: calc(25% - 3px);
+    width: -webkit-calc(25%);
+    width: calc(25%);
   }
 }
