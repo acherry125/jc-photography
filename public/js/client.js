@@ -13,11 +13,26 @@ function initHome() {
 			var path = 'demo_images/',
 				fileName = 'img (' + (i % 9) + ').JPG',
 				bigFileName = 'img (' + (i % 9) + ')-big.JPG'
-				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a href="' 
+				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a rel="group1" href="' 
 				+ path + bigFileName + '"><img src="' + path + fileName + '"></a></li></div>';
 			$('.grid').append(gridItem);
 		}
-		$(document).foundation('clearing', 'reflow');
+		$(".grid-item a").fancybox({
+			helpers: {
+				title	: {
+					type: 'outside'
+				},
+				thumbs	: {
+					width: 100,
+					height: 100
+				}
+			},
+			padding: [2, 2, 2, 2],
+			margin: [20, 20, 0, 5],
+			autoResize: true,
+			aspectRatio: true,
+			minWidth: 280
+		});
 		var $grid = $('.grid').masonry({
   			// options
   			itemSelector: '.grid-item',
@@ -57,7 +72,3 @@ initCurrentPage();
 $(window).on('hashchange', function() {
 	initCurrentPage();
 })
-
-$(document.body).on("closed.fndtn.clearing", function(event) {
-	$('.grid').masonry();
-});
