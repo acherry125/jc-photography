@@ -11,8 +11,8 @@ function initHome() {
 	$('main').load('views/home.view.html', function() {
 		for(var i = 0; i < 32; i++) {
 			var path = 'demo_images/',
-				fileName = 'img (' + (i % 9) + ').JPG',
-				bigFileName = 'img (' + (i % 9) + ')-big.JPG'
+				fileName = 'img (' + (i % 14) + ').JPG',
+				bigFileName = 'img (' + (i % 14) + ')-big.JPG'
 				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a rel="group1" href="' 
 				+ path + bigFileName + '"><img src="' + path + fileName + '"></a></li></div>';
 			$('.grid').append(gridItem);
