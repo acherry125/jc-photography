@@ -8,11 +8,19 @@ function loadSlick() {
 }
 
 function initHome() {
-	$('main').load('views/home.view.html', function() {
+	initGallery('home', 19);
+}
+
+function initMisc() {
+	initGallery('misc', 9);
+}
+ 
+function initGallery(galleryName, numPhotos) {
+	$('main').load('views/gallery.view.html', function() {
 		for(var i = 0; i < 50; i++) {
-			var path = 'demo_images/',
-				fileName = 'img (' + (i % 19) + ').JPG',
-				bigFileName = 'img (' + (i % 19) + ')-big.JPG'
+			var path = 'photographs/' + galleryName + '/',
+				fileName = 'img (' + (i % numPhotos) + ').JPG',
+				bigFileName = 'img (' + (i % numPhotos) + ')-big.JPG'
 				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a rel="group1" href="' 
 				+ path + bigFileName + '"><img src="' + path + fileName + '"></a></li></div>';
 			$('.grid').append(gridItem);
@@ -60,10 +68,11 @@ function initCurrentPage() {
 	view = location.hash.substring(2);
 	if(view === 'about') {
 		initAbout();
+	} else if(view === 'life'){
+		initMisc();
 	} else {
 		initHome();
 	}
-	return false;
 }
 
 $(document).foundation();

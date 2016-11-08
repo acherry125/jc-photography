@@ -141,6 +141,10 @@ main {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.dropdown .title, .dropdown .title a, .dropdown .parent-link, .dropdown .parent-link a {
+  font-weight: bold !important;
+}
+
 @media only screen and (min-width: 40.0625em) {
   .fancybox-nav {
     visibility: visible;
