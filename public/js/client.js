@@ -18,9 +18,9 @@ function initMisc() {
 function initGallery(galleryName, numPhotos) {
 	$('main').load('views/gallery.view.html', function() {
 		for(var i = 0; i < 50; i++) {
-			var path = 'photographs/' + galleryName + '/',
-				fileName = 'img (' + (i % numPhotos) + ').JPG',
-				bigFileName = 'img (' + (i % numPhotos) + ')-big.JPG'
+			var path = 'https://s3.amazonaws.com/jc-website-photos/' + galleryName + '/',
+				fileName = 'img(' + (i % numPhotos) + ').jpg',
+				bigFileName = 'img(' + (i % numPhotos) + ')-big.jpg'
 				gridItem = '<li class="grid-item"><div class="grid-item-padding"><a rel="group1" href="' 
 				+ path + bigFileName + '"><img src="' + path + fileName + '"></a></li></div>';
 			$('.grid').append(gridItem);
