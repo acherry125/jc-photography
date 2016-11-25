@@ -134,7 +134,7 @@ table thead, table tfoot {
 }
 
 .tab-bar .menu-icon.right {
-    text-indent: -5.5em;
+    text-indent: -3.25em;
     margin-right: 20px;
     color: #dc1935;
 }
@@ -187,11 +187,7 @@ table thead, table tfoot {
     background-color: #fff;
 }
 
-.left-off-canvas-menu h2 {
-    color: #009900;
-}
-
-.right-off-canvas-menu a, .right-off-canvas-menu h2 {
+.right-off-canvas-menu a {
     color: #fff;
 }
 
