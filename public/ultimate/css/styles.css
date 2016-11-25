@@ -2,6 +2,20 @@
 /* #009900 green */
 /* #dc1935 pink */
 
+/* To keep the offcanvas menus stuck to top of their content */ 
+body,
+html,
+.off-canvas-wrap, 
+.off-canvas-wrap .inner-wrap, .main-page {
+    height: 100%;
+    width: 100%;
+}
+
+.main-page {
+    padding: 10px;
+    overflow-y: auto;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -46,11 +60,6 @@ h2, h3 {
 
 table thead, table tfoot {
     background-color: #e4e4e4;
-}
-
-.inner-wrap {
-    padding: 10px;
-    min-height: 100vh;
 }
 
 .slick-carousel {
@@ -178,7 +187,11 @@ table thead, table tfoot {
     background-color: #fff;
 }
 
-.right-off-canvas-menu a {
+.left-off-canvas-menu h2 {
+    color: #009900;
+}
+
+.right-off-canvas-menu a, .right-off-canvas-menu h2 {
     color: #fff;
 }
 
@@ -199,8 +212,8 @@ table thead, table tfoot {
 
 .side-panel {
     width: 12%;
-    height: 100vh;
-    position: fixed;
+    height: 100%;
+    position: absolute;
     top: 0;
     display: none;
 }

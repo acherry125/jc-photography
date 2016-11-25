@@ -7,20 +7,26 @@ function loadSlick() {
 	});
 }
 
+function initHome() {
+	initPage('combined-home', 'combined');
+}
+
 function initTrudgeHome() {
-	initPage('trudge-home');
+	initPage('trudge-home', 'trudge');
 }
 
 function initTrudgeGames() {
-	initPage('trudge-records');
+	initPage('trudge-records', 'trudge');
 }
 
 function initTrudgeTournament() {
-	initPage('trudge-tournament');
+	initPage('trudge-tournament', 'trudge');
 }
 
 
-function initPage(viewName) {
+function initPage(viewName, team) {
+	imgTag = '<img src="images/' + team + '-logo.png">';
+	$('#top-logo').html(imgTag);
 	$('main').load('views/' + viewName + '.view.html', function() {
 		if (viewName == 'trudge-records') {
 			$('.records-table').DataTable({
@@ -53,16 +59,36 @@ function initAbout() {
 }
 */
 function initCurrentPage() {
-	view = location.hash.substring(2);
-	if(view === 'trudge/home') {
-		initTrudgeHome();
-	} else if(view === 'trudge/games') {
-		initTrudgeGames();
-	} else if(view === 'trudge/tournament') {
-		initTrudgeTournament();
+	var view = location.hash.substring(2);
+	var viewParts = view.split('/');
+	if(viewParts[0] === 'trudge') {
+		switch(viewParts[1]) {
+			case 'home': 
+				initTrudgeHome();
+				break;
+			case 'games':
+				initTrudgeGames();
+				break;
+			case 'tournament':
+				initTrudgeTournament();
+				break;
+			default:
+				initTrudgeHome();
+				break;
+		}
+	} else if (viewParts[0] === 'strut') {
+		switch(viewParts[1]) {
+			case 'home': 
+				initStrutHome();
+				break;
+			default:
+				initStrutHome();
+				break;
+		}
 	} else {
-		initTrudgeHome();
+		initHome();
 	}
+	
 }
 
 $(document).foundation();
@@ -75,4 +101,3 @@ $(window).on('hashchange', function() {
 $(document).on('click', '.js-offcanvas-close', function(e) {
 	$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 })
-
