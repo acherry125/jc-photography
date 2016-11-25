@@ -31,6 +31,10 @@ function initStrutHome() {
 	initPage('strut-home', 'strut');
 }
 
+function initStrutRules() {
+	initPage('strut-rules', 'strut');
+}
+
 
 function initPage(viewName, team) {
 	imgTag = '<img src="images/' + team + '-logo.png">';
@@ -79,6 +83,9 @@ function initCurrentPage() {
 		switch(viewParts[1]) {
 			case 'home': 
 				initStrutHome();
+				break;
+			case 'rules': 
+				initStrutRules();
 				break;
 			default:
 				initStrutHome();

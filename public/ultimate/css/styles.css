@@ -53,7 +53,7 @@ a:hover, a:focus, a:active {
     color: #6b4104;
 }
 
-h2, h3 {
+h2, h3, h4, h5 {
     font-weight: bold;
     margin-bottom: 2px;
 }
@@ -139,38 +139,51 @@ table thead, table tfoot {
     color: #dc1935;
 }
 
-.tab-bar .menu-icon span {
+.tab-bar .menu-icon > span {
     line-height: 3;
     margin-left: 20px;
     font-weight: bold;
 }
 
-.tab-bar .menu-icon:hover span, .tab-bar .menu-icon[aria-expanded="true"] {
+.tab-bar .menu-icon.right > span {
+    position: relative;
+}
+
+.tab-bar .menu-icon.right > span > span {
+    position: relative;
+    right: 30px;
+}
+
+.tab-bar .menu-icon.right > span > span:after {
+    content: none;
+}
+
+.tab-bar .menu-icon:hover > span, .tab-bar .menu-icon[aria-expanded="true"] {
     color: #6b4104;
 }
 
-.tab-bar .menu-icon span::after {
+.tab-bar .menu-icon > span::after {
   box-shadow: 0 0 0 2px #009900, 0 10px 0 2px #009900, 0 20px 0 2px #009900;
   -webkit-box-shadow: 0 0 0 2px #009900, 0 10px 0 2px #009900, 0 20px 0 2px #009900;
   width: 2rem;
 }
 
-.tab-bar .menu-icon span:hover:after, .tab-bar .menu-icon:hover span:after, .tab-bar .menu-icon[aria-expanded="true"] span:after {
+.tab-bar .menu-icon > span:hover:after, .tab-bar .menu-icon:hover > span:after, .tab-bar .menu-icon[aria-expanded="true"] > span:after {
   box-shadow: 0 0 0 2px #6b4104, 0 10px 0 2px #6b4104, 0 20px 0 2px #6b4104;
   -webkit-box-shadow: 0 0 0 2px #6b4104, 0 10px 0 2px #6b4104, 0 20px 0 2px #6b4104;
 }
 
-.tab-bar .menu-icon.right:hover span, .tab-bar .menu-icon.right[aria-expanded="true"] {
+.tab-bar .menu-icon.right:hover > span, .tab-bar .menu-icon.right[aria-expanded="true"] > span {
     color: #000;
 }
 
-.tab-bar .menu-icon.right span::after {
+.tab-bar .menu-icon.right > span::after {
   box-shadow: 0 0 0 2px #dc1935, 0 10px 0 2px #dc1935, 0 20px 0 2px #dc1935;
   -webkit-box-shadow: 0 0 0 2px #dc1935, 0 10px 0 2px #dc1935, 0 20px 0 2px #dc1935;
   width: 2rem;
 }
 
-.tab-bar .menu-icon.right span:hover:after, .tab-bar .menu-icon.right:hover span:after, .tab-bar .menu-icon.right[aria-expanded="true"] span:after {
+.tab-bar .menu-icon.right > span:hover:after, .tab-bar .menu-icon.right:hover > span:after, .tab-bar .menu-icon.right[aria-expanded="true"] > span:after {
   box-shadow: 0 0 0 2px #000, 0 10px 0 2px #000, 0 20px 0 2px #000;
   -webkit-box-shadow: 0 0 0 2px #000, 0 10px 0 2px #000, 0 20px 0 2px #000;
 }
