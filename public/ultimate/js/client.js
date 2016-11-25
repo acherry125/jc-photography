@@ -11,6 +11,8 @@ function initHome() {
 	initPage('combined-home', 'combined');
 }
 
+// TRUDGE
+
 function initTrudgeHome() {
 	initPage('trudge-home', 'trudge');
 }
@@ -21,6 +23,12 @@ function initTrudgeGames() {
 
 function initTrudgeTournament() {
 	initPage('trudge-tournament', 'trudge');
+}
+
+// STRUT
+
+function initStrutHome() {
+	initPage('strut-home', 'strut');
 }
 
 
@@ -48,16 +56,7 @@ function initPage(viewName, team) {
 	});
 	return false;
 }
-/*
-function initAbout() {
-	$('main').load('views/about.view.html', function () {
-		$('.slick-carousel').imagesLoaded().always( function() {
-				loadSlick();
-		});
-	});
-	return false;
-}
-*/
+
 function initCurrentPage() {
 	var view = location.hash.substring(2);
 	var viewParts = view.split('/');
