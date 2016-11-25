@@ -25,6 +25,10 @@ function initTrudgeTournament() {
 	initPage('trudge-tournament', 'trudge');
 }
 
+function initTrudgeBios() {
+	initPage('trudge-bio', 'trudge');
+}
+
 // STRUT
 
 function initStrutHome() {
@@ -74,6 +78,9 @@ function initCurrentPage() {
 				break;
 			case 'tournament':
 				initTrudgeTournament();
+				break;
+			case 'bios':
+				initTrudgeBios();
 				break;
 			default:
 				initTrudgeHome();
