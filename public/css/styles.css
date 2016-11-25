@@ -75,13 +75,17 @@ main {
   -webkit-box-shadow: 0 0 0 1px #FFFFFF, 0 7px 0 1px #FFFFFF, 0 14px 0 1px #FFFFFF;
 }
 
+.top-bar.fixed {
+  position: fixed;
+}
+
 .top-bar-section li:hover, .top-bar-section li:focus, .top-bar-section li:active {
   background-color: #f7a67b;
 }
 
 .logo {
   position: fixed;
-  width: 100px;
+  width: 65px;
   transition: 0.5s;
 }
 
@@ -155,6 +159,7 @@ main {
   }
   .logo {
     position: initial;
+    width: 100px;
   }
   .visible-img img {
     max-height: 100%;
