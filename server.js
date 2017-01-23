@@ -10,7 +10,6 @@ var init = require('./scripts/app.js');
 // passing project module the express module
 init(app);
 
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port      = 80;
 
-app.listen(port, ipaddress);
+app.listen(port);

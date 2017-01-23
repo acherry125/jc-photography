@@ -17,6 +17,9 @@ function initMisc() {
  
 function initGallery(galleryName, numPhotos) {
 	$('main').load('views/gallery.view.html', function() {
+		/*$.getJSON( "json/" + galleryName + ".json", function( data ) {
+		  console.log(data)
+		});*/
 		for(var i = 0; i < 50; i++) {
 			var path = 'https://s3.amazonaws.com/jc-website-photos/' + galleryName + '/',
 				fileName = 'img(' + (i % numPhotos) + ').jpg',
@@ -35,7 +38,7 @@ function initGallery(galleryName, numPhotos) {
 					height: 100
 				}
 			},
-			padding: [2, 2, 2, 2],
+			padding: [5, 5, 5, 5],
 			margin: [20, 20, 0, 5],
 			autoResize: true,
 			aspectRatio: true,

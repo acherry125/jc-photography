@@ -13,6 +13,9 @@ body {
 header {
 	padding: 10px 10px;
 	text-align: center;
+	background-color: #e6e6e6;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
 	h1 {
 		font-family: 'Parisienne', cursive;
 	}
@@ -31,8 +34,12 @@ main {
 .slick-item {
 	max-height: 55vh;
 	margin: 0 5px;
+	opacity: 0.3;
 	&:focus, &:active {
 		outline: none;
+	}
+	&.slick-current {
+		opacity: 1;
 	}
 	img {
 		max-height: inherit;
@@ -128,7 +135,7 @@ main {
 	font-weight: bold;
 	border: 2px solid #fff;
 	&:hover, &:focus, &:hover, &:focus {
-		background-color: $mango;
+		background-color: $cherryRed;
 		color: #fff;
 		border-color: $cherryRed;
 	}

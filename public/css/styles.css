@@ -9,6 +9,9 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p {
 header {
   padding: 10px 10px;
   text-align: center;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
 }
 
 header h1 {
@@ -28,10 +31,15 @@ main {
 .slick-item {
   max-height: 55vh;
   margin: 0 5px;
+  opacity: 0.3;
 }
 
 .slick-item:focus, .slick-item:active {
   outline: none;
+}
+
+.slick-item.slick-current {
+  opacity: 1;
 }
 
 .slick-item img {
@@ -132,7 +140,7 @@ main {
 }
 
 .gallery-button:hover, .gallery-button:focus, .gallery-button:hover, .gallery-button:focus {
-  background-color: #f7a67b;
+  background-color: #d44865;
   color: #fff;
   border-color: #d44865;
 }
